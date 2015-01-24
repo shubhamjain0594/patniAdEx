@@ -1,0 +1,1 @@
+This is a project built for Patni Healthcare as part of my Winternship Project in Decembers 2014. We have built APIs for a very basic Ad Exchange on Django framework. All rights of this are reserved with the company.
