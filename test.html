@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="ad_bid">
+		<img src="" alt="PatniAdEx" id="ad_bid_img" style="height: 50px;">
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var dat = {url: "http://www.fb.com/",};
+		var jqxhr = $.ajax({
+			type: "POST",
+			url: "http://127.0.0.1:8000/patient/patient_details/",
+			dataType: 'application/json;charset=utf-8',
+			data:JSON.stringify(dat),
+		});
+		jqxhr.done(function(response){
+			console.log(response);
+			var alpha = response;
+			$("#ad_bid_img").attr("src",alpha["advertise_url"]);
+		})
+		//console.log(dat);
+	})
+	</script>
+</body>
+</html>
